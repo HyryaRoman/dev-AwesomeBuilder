@@ -1,0 +1,37 @@
+header {
+  background-color: $color-bg-light;
+
+  nav {
+    display: flex;
+    // justify-content: space-between;
+    padding: 10px 0;
+
+    .logo {
+      height: 80px;
+    }
+
+    .nav-list {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin-left: auto;
+      list-style: none;
+    }
+
+    .nav-link {
+      padding: 10px 20px;
+      font-size: 20px;
+      color: $color-text-light;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &:hover {
+        background-color: $color-fx-ligher;
+      }
+
+      &:active {
+        background-color: $color-fx-darker;
+      }
+    }
+  }
+}

@@ -8,7 +8,17 @@ $color-text-dark: color.invert($color-text-light, $space:rgb);
 $color-bg-light: #6f4f38;
 $color-bg-dark: #382b23;
 
+$color-fx-ligher: #FFDF9416;
+$color-fx-darker: #07081e1e;
+
 body {
   background-color: $color-bg-dark;
   color: $color-text-light;
+  font-family: "Exo 2", sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
 }
