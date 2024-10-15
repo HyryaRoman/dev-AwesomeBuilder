@@ -1,0 +1,14 @@
+@use 'sass:color';
+
+/* color palette by: https://www.colourpod.com/post/762697107631226880/might-as-well-be-submitted-by-seesawsiya */
+
+$color-primary: #a1cea7;
+$color-text-light: #ddd1c3;
+$color-text-dark: color.invert($color-text-light, $space:rgb);
+$color-bg-light: #6f4f38;
+$color-bg-dark: #382b23;
+
+body {
+  background-color: $color-bg-dark;
+  color: $color-text-light;
+}
