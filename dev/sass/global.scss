@@ -19,6 +19,20 @@ body {
 }
 
 .container {
-  margin: 0 auto;
-  max-width: 1680px;
+  margin: 0 10px;
+  // max-width: 1800px;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .container {
+    margin: 0 auto;
+    max-width: 1800px;
+  }
 }
