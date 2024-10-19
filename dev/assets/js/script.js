@@ -13,6 +13,9 @@
 
       // Set inner html to retrieved value
       slot.innerHTML = data;
+
+      // Add 'data-value' attribute for styling
+      slot.setAttribute('data-value', data);
     })
   }
 
@@ -28,6 +31,9 @@
 
       // Set inner html to clear text
       slot.innerHTML = emptyText;
+
+      // Clear 'data-value' attribute for styling
+      slot.removeAttribute('data-value');
     })
   }
 

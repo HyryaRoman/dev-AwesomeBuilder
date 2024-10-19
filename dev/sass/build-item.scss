@@ -1,13 +1,20 @@
 .info-map {
   & > * {
+    --color: #05FFFF;
+
     fill: transparent;
     stroke: transparent;
     fill-opacity: 0.3;
     stroke-width: 3;
 
-    &:hover {
-      fill: #05FFFF;
-      stroke: #05FFFF;
+    &[data-available-count="0"] {
+      --color: #ea2b2b;
+    }
+
+    &:hover, &:focus-visible {
+      fill: var(--color);
+      stroke: var(--color);
+      outline: none;
     }
   }
 }
@@ -19,11 +26,13 @@
   margin-top: 20px;
 
   .property {
+    --color: #{$color-primary};
+
     flex: 1;
     display: block;
     padding: 12px 20px 20px;
     // border: 3px solid $color-bg-light;
-    background-color: $color-primary;
+    background-color: var(--color);
     color: $color-text-dark;
 
     &-title {
@@ -38,6 +47,15 @@
       font-weight: 600;
       line-height: 20px;
     }
+
+    &.warn-if-zero:has([data-value="0"]) {
+      --color: #e18888;
+    }
+
+    // Hide if no value
+    // &:not(:has([data-value])) {
+    //   display: none;
+    // }
   }
 }
 
