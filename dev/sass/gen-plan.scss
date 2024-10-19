@@ -1,0 +1,22 @@
+.gen-plan {
+  &.info-map {
+    & > * {
+      --color: #05FFFF;
+
+      fill: transparent;
+      stroke: transparent;
+      fill-opacity: 0.3;
+      stroke-width: 3;
+
+      &[data-available-count="0"] {
+        --color: #ea2b2b;
+      }
+
+      &:hover, &:focus-visible {
+        fill: var(--color);
+        stroke: var(--color);
+        outline: none;
+      }
+    }
+  }
+}

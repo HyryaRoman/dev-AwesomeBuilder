@@ -9,7 +9,7 @@
       const dataSource = 'data-' + slot.getAttribute('data-info-slot');
 
       // Get attributes value
-      const data = source.getAttribute(dataSource);
+      const data = source.getAttribute(dataSource) || '-';
 
       // Set inner html to retrieved value
       slot.innerHTML = data;

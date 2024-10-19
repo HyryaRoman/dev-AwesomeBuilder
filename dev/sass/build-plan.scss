@@ -1,0 +1,21 @@
+.build-plan {
+  &.info-map {
+    & > * {
+      --color: #FF00C7;
+
+      fill: transparent;
+      stroke: transparent;
+      stroke-width: 5;
+
+      &[data-available-count="0"] {
+        --color: #ea2b2b;
+      }
+
+      &:hover, &:focus-visible {
+        // fill: var(--color);
+        stroke: var(--color);
+        outline: none;
+      }
+    }
+  }
+}
