@@ -1,0 +1,75 @@
+.floor-plan {
+  &.info-map {
+    & > * {
+      --color: #00FF19;
+
+      &.status-free {
+        --color: #00DEFC;
+      }
+
+      &.status-discount {
+        --color: #80D34E;
+      }
+
+      &.status-reserved {
+        --color: #6B68FF;
+      }
+
+      &.status-sold {
+        --color: #D34E4E;
+      }
+
+      .outline {
+        fill: transparent;
+        stroke: transparent;
+        stroke-width: 2;
+      }
+
+      &:hover, &:focus-visible {
+        outline: none;
+
+        .outline {
+          // fill: var(--color);
+          stroke: var(--color);
+          outline: none;
+        }
+      }
+
+      .status {
+        &-indicator {
+          fill: #80D34E;
+          stroke: black;
+          stroke-width: 2;
+
+          &.status-free {
+            fill: #00DEFC;
+          }
+
+          &.status-discount {
+            fill: #80D34E;
+          }
+
+          &.status-reserved {
+            fill: #6B68FF;
+          }
+
+          &.status-sold {
+            fill: #D34E4E;
+          }
+        }
+
+        text {
+          fill: black;
+          font-family: "Exo 2";
+          font-weight: bold;
+          font-size: 16px;
+          white-space: pre;
+        }
+      }
+    }
+  }
+}
+
+.property.warn-if-sold:has([data-value="Продано"]) {
+  --color: #e18888;
+}
